@@ -1,0 +1,62 @@
+body {
+    /* background: url(imgs/gojo.jpeg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(imgs/goku-blue-eyes-power-wallpaper-3000x2000_42.jpg);
+}
+.container1-1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container1-1 span{
+    align-self: center;
+}
+
+.container1-1 ,p,h1{
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px cyan;
+}
+
+.container1-1 ,p{
+    font-size: 25px;
+}
+
+.container1-1 ,h1{
+    font-size: 35px;
+}
+
+
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #171717;
+    color: white;
+    border: none;
+}
+
+input:focus{
+    background-color: orange;
+    color: black;
+    transition: all 0.3s ease-in;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    font-family: sans-serif;
+    font-weight: bolder;
+    border-radius: 25px;
+}
+
+button:hover{
+    color: orange;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}

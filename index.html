@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umar Checker </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container1">
+        <div class="container1-1">
+            <span>
+                <h1>Umar Checker</h1>
+            </span>
+            <span>
+                <p>Enter your date of birth to check if you are 18+:</p>
+            </span>
+            <span>
+                <input type="date" id="dob">
+            </span>
+            <span>
+                <br>
+                <button onclick="checkAge()">Check Age</button>
+            </span>
+        </div>
+    </div>
+
+    <script>
+        function checkAge() {
+            let dobInput = document.getElementById('dob').value;
+
+            if (!dobInput) {
+                alert('Enter your date of birth!');
+                return;
+            }
+
+            let dob = new Date(dobInput);
+            let today = new Date();
+            let age = today.getFullYear() - dob.getFullYear();
+            let monthDiff = today.getMonth() - dob.getMonth();
+            let dayDiff = today.getDate() - dob.getDate();
+
+            let is18 = age > 18 || (age === 18 && (monthDiff > 0 || (monthDiff === 0 && dayDiff >= 0)));
+
+            if (is18) {
+                alert('You are 18+!');
+            } else {
+                let future18 = new Date(dob);
+                future18.setFullYear(dob.getFullYear() + 18);
+                alert(`You are under 18. You will turn 18 on ${future18.toDateString()}.`);
+            }
+        }
+    </script>
+</body>
+</html>
